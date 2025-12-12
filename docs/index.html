@@ -196,28 +196,20 @@ Sotirios Nikoloutsopoulos
   </title>
 </head>
 
-<body class="light">
+<body class="dark">
   
   
 <script>
     let localStorageValue = localStorage.getItem("pref-theme");
-    let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-    switch (localStorageValue) {
-        case "dark":
-            document.documentElement.classList.add('dark');
-            document.body.classList.add('dark');
-            break;
-        case "light":
-            document.body.classList.remove('dark');
-            document.documentElement.classList.remove('dark');
-            break;
-        default:
-            if (mediaQuery) {
-                document.documentElement.classList.add('dark');
-                document.body.classList.add('dark');
-            }
-            break;
+    
+    // Only turn OFF dark mode if the user explicitly chose "light" in the past
+    if (localStorageValue === "light") {
+        document.body.classList.remove('dark');
+        document.documentElement.classList.remove('dark');
+    } else {
+        // Otherwise, force Dark Mode by default
+        document.documentElement.classList.add('dark');
+        document.body.classList.add('dark');
     }
 </script>
 
@@ -504,7 +496,7 @@ Sotirios Nikoloutsopoulos
                                 <div><span class="h4">Researcher</span><small> - AUEB</small></div>
                                 <div class="d-block"><small>May 2021 - Apr 2023</small></div>
                             </div>
-                            <div class="pb-2 pb-3">Researcher in the project "Holistic and foundational resource allocation framework for optimized and impactful edge computing services (LeadingEdge)"[cite: 33].</div>
+                            <div class="pb-2 pb-3">Researcher in the project "Holistic and foundational resource allocation framework for optimized and impactful edge computing services (LeadingEdge)".</div>
                         </div>
                     
                         <div class="tab-pane fade bg-transparent" id="pills-hbp" role="tabpanel">
@@ -514,8 +506,8 @@ Sotirios Nikoloutsopoulos
                             </div>
                             <div class="pb-2 pb-3">
                                 <ul>
-                                    <li>Setup LORIS for hospitals joining the Medical Informatics Platform[cite: 34].</li>
-                                    <li>Worked on Query rewriting for Ontology Based Data Access[cite: 35].</li>
+                                    <li>Setup LORIS for hospitals joining the Medical Informatics Platform.</li>
+                                    <li>Worked on Query rewriting for Ontology Based Data Access.</li>
                                 </ul>
                             </div>
                         </div>

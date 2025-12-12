@@ -95,8 +95,25 @@
 
     /* Define the 'Alternate' background color for Dark Mode */
     .dark {
-    /* This makes the alternate section slightly lighter than the main dark bg */
+        /* Set the alternate background */
         --bg-alt: #212529; 
+        
+        /* SWAP the main variables to use the Dark Mode values */
+        --text-color: var(--text-color-dark);
+        --text-secondary-color: var(--text-secondary-color-dark);
+        --text-link-color: var(--text-link-color-dark);
+        
+        --background-color: var(--background-color-dark);
+        --secondary-background-color: var(--secondary-background-color-dark);
+        
+        --primary-color: var(--primary-color-dark);
+        --secondary-color: var(--secondary-color-dark);
+    }
+    
+    /* Force the body to actually USE these colors */
+    body {
+        color: var(--text-color) !important;
+        background-color: var(--background-color) !important;
     }
 
     /* Apply the pattern */

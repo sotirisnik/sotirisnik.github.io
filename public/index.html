@@ -1,0 +1,1240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+<link rel="icon" href=/fav.png type="image/gif">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      media="print" onload="this.media='all'" />
+<noscript>
+  <link
+          href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+</noscript>
+
+
+<link rel="stylesheet" href="/css/font.css" media="all">
+
+
+
+<meta property="og:url" content="https://sotirisnik.github.io/">
+  <meta property="og:site_name" content="Hugo Profile">
+  <meta property="og:title" content="Hugo Profile">
+  <meta property="og:description" content="Text about my cool site">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="website">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Hugo Profile">
+  <meta name="twitter:description" content="Text about my cool site">
+
+
+<link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
+<link rel="stylesheet" href="/css/footer.css" media="all">
+
+
+<link rel="stylesheet" href="/css/theme.css" media="all">
+
+<style>
+    :root {
+        --text-color: #343a40;
+        --text-secondary-color: #6c757d;
+        --text-link-color: #007bff;
+        --background-color: #eaedf0;
+        --secondary-background-color: #64ffda1a;
+        --primary-color: #007bff;
+        --secondary-color: #f8f9fa;
+
+         
+        --text-color-dark: #e4e6eb;
+        --text-secondary-color-dark: #b0b3b8;
+        --text-link-color-dark: #ffffff;
+        --background-color-dark: #18191a;
+        --secondary-background-color-dark: #212529;
+        --primary-color-dark: #ffffff;
+        --secondary-color-dark: #212529;
+    }
+    body {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: left;
+    }
+
+    html {
+        background-color: var(--background-color) !important;
+    }
+
+    body::-webkit-scrollbar {
+        height: 0px;
+        width: 8px;
+        background-color: var(--background-color);
+    }
+
+    ::-webkit-scrollbar-track {
+        border-radius: 1rem;
+    }
+
+    /* Define the 'Alternate' background color for Light Mode */
+    :root {
+        --bg-alt: #ffffff; /* White creates a nice contrast with gray #eaedf0 */
+    }
+
+    /* Define the 'Alternate' background color for Dark Mode */
+    .dark {
+    /* This makes the alternate section slightly lighter than the main dark bg */
+        --bg-alt: #212529; 
+    }
+
+    /* Apply the pattern */
+    /* This targets every EVEN section (2nd, 4th, 6th...) inside the content div */
+    #content > section:nth-of-type(even) {
+        background-color: var(--bg-alt) !important;
+    }
+
+    /* Ensure ODD sections keep the main background color */
+    #content > section:nth-of-type(odd) {
+        background-color: var(--background-color) !important;
+    }
+
+    /* Apply the 'Alternate' color to the Menu */
+    #profileHeader .navbar {
+        background-color: var(--bg-alt) !important;
+        /* Optional: Adds a subtle shadow so the menu doesn't blend into the next section */
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+        /* Remove top padding so the color fills the whole bar */
+        padding-top: 1rem !important; 
+        padding-bottom: 1rem !important;
+    }
+
+    /* Ensure the menu text stands out */
+    #profileHeader .nav-link,
+    #profileHeader .navbar-brand {
+        color: var(--text-color) !important;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 1rem;
+        background: #b0b0b0;
+        outline: 1px solid var(--background-color);
+    }
+
+    #search-content::-webkit-scrollbar {
+        width: .5em;
+        height: .1em;
+        background-color: var(--background-color);
+    }
+</style>
+
+
+
+<meta name="description" content=Text&#32;about&#32;my&#32;cool&#32;site>
+<link rel="stylesheet" href="/css/index.css" media="all">
+<link rel="stylesheet" href="/css/projects.css" media="all">
+
+
+<script defer src="/fontawesome-6/all-6.4.2.js"></script>
+
+
+<style>
+    /* Force the modal to appear on top of everything */
+    .modal { z-index: 100050 !important; }
+    .modal-backdrop { z-index: 100040 !important; }
+    
+    /* Remove the annoying blue focus outline */
+    .modal-content:focus, .modal:focus { outline: none !important; box-shadow: none !important; }
+    
+    .modal-content {
+        background-color: #ffffff !important; /* Force white background */
+        color: #000000 !important; /* Force black text for headers */
+        border: none;
+        box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+    
+    /* Style the Close 'X' button to be visible */
+    .btn-close {
+        filter: invert(0) !important; /* Ensure it's dark on white background */
+    }
+    
+    /* Darken the code block background */
+    #citationCode {
+        background-color: #2e3440 !important;
+        color: #d8dee9 !important;
+        padding: 15px;
+        border-radius: 4px;
+    }
+
+    #profileHeader .navbar-nav .nav-link {
+        font-size: 1.2rem;       /* Larger text */
+        font-weight: 500;        /* Slightly bolder */
+        padding-left: 1.5rem;    /* More space between items */
+        padding-right: 1.5rem;
+        color: var(--text-color); /* Ensure high contrast */
+    }
+    
+    #profileHeader .navbar-nav {
+        align-items: center;
+    }
+</style>
+
+  <title>
+Sotirios Nikoloutsopoulos
+
+  </title>
+</head>
+
+<body class="light">
+  
+  
+<script>
+    let localStorageValue = localStorage.getItem("pref-theme");
+    let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    switch (localStorageValue) {
+        case "dark":
+            document.documentElement.classList.add('dark');
+            document.body.classList.add('dark');
+            break;
+        case "light":
+            document.body.classList.remove('dark');
+            document.documentElement.classList.remove('dark');
+            break;
+        default:
+            if (mediaQuery) {
+                document.documentElement.classList.add('dark');
+                document.body.classList.add('dark');
+            }
+            break;
+    }
+</script>
+
+
+
+
+<script>
+    var prevScrollPos = window.pageYOffset;
+    window.addEventListener("scroll", function showHeaderOnScroll() {
+        let profileHeaderElem = document.getElementById("profileHeader");
+        let currentScrollPos = window.pageYOffset;
+        let resetHeaderStyle = false;
+        let showNavBarOnScrollUp =  true ;
+        let showNavBar = showNavBarOnScrollUp ? prevScrollPos > currentScrollPos : currentScrollPos > 0;
+        if (showNavBar) {
+            profileHeaderElem.classList.add("showHeaderOnTop");
+        } else {
+            resetHeaderStyle = true;
+        }
+        if(currentScrollPos === 0) {
+            resetHeaderStyle = true;
+        }
+        if(resetHeaderStyle) {
+            profileHeaderElem.classList.remove("showHeaderOnTop");
+        }
+        prevScrollPos = currentScrollPos;
+    });
+</script>
+
+
+
+<header id="profileHeader">
+    <nav class="pt-3 navbar navbar-expand-lg animate">
+        <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
+                        
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg aria-hidden="true" height="24" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                    <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path>
+                </svg>
+            </button>
+
+            
+            <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
+                <ul class="navbar-nav mx-auto text-center">  
+
+                    
+                    <li class="nav-item navbar-text"><a class="nav-link" href="/#about">About Me</a></li>
+                    <li class="nav-item navbar-text"><a class="nav-link" href="/#experience">Experience</a></li>
+                    <li class="nav-item navbar-text"><a class="nav-link" href="/#education">Education</a></li>
+                    <li class="nav-item navbar-text"><a class="nav-link" href="/#teaching">Teaching</a></li>
+                    <li class="nav-item navbar-text"><a class="nav-link" href="/#honors">Honors</a></li>
+                    <li class="nav-item navbar-text"><a class="nav-link" href="/#outreach">Outreach</a></li>
+                    <li class="nav-item navbar-text"><a class="nav-link" href="/#publications">Publications</a></li>
+                    <li class="nav-item navbar-text"><a class="nav-link" href="/#contact">Contact</a></li>
+    
+                    
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        
+                        <div class="text-center">
+                            <button id="theme-toggle">
+                                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                </svg>
+                                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+
+<div id="content">
+<section id="hero" class="py-5 align-middle">
+    <div class="container px-3 px-sm-5 px-md-5 px-lg-5 pt-lg-3">
+        <div class="row">
+
+            <div class="col-sm-12 col-md-12 col-lg-4">
+                <div class="row justify-content-center">
+                    <div class="col-sm-12 col-md-12 pt-5 image animate px-5 px-md-5 px-lg-0 text-center">
+                        <img src="/images/profile.jpeg"
+                            class="img-thumbnail mx-auto"
+                            alt=""
+                            style="border-radius: 50%;"
+                        >
+                            
+          <h2 class="mt-3">Sotirios Nikoloutsopoulos</h2>
+
+          <p style="font-size: 1.1rem; margin-top: 10px;">
+            PhD in Artificial Intelligence<br>
+            Athens University of Economics and Business
+          </p>
+
+          <!-- SOCIAL ICONS -->
+          <div class="mt-3">
+            <a href="mailto:snikolou@aueb.gr" class="btn social-icon mx-1">
+              <i class="fas fa-envelope"></i>
+            </a>
+
+            <a href="https://scholar.google.com/citations?user=L-2H3n4AAAAJ target="_blank" class="btn social-icon mx-1">
+              <i class="fas fa-graduation-cap"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/in/sotirios-nikoloutsopoulos-094a67117" target="_blank" class="btn social-icon mx-1">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+
+          <div class="mt-4">
+            <a href="/cv/CV_nikoloutsopoulos.pdf" target="_blank" class="btn btn-outline-primary">
+              <i class="fas fa-file-pdf me-2"></i> Download Detailed CV
+            </a>
+          </div>
+
+                    </div>
+                    
+                </div>
+            </div>
+
+
+            
+            <div class="col-sm-12 col-md-12 col-lg-7 offset-lg-1 content animate" id="primary-font">
+                    <p class="hero-content">
+                        I am a Machine Learning Researcher holding a PhD in Artificial Intelligence from the Athens University of Economics and Business. 
+                        My research focuses on developing scalable <strong>Federated, Continual, and Meta-Learning</strong> algorithms designed to operate under 
+                        decentralized, dynamic, and data-limited conditions.
+                        <br><br>
+                        Currently, I serve as a Researcher at the <strong>Hellenic Research Technological Development and Innovation Center (KETAK)</strong>. 
+                        My academic background spans computer science and data science, and I am currently expanding my theoretical foundations through a BSc in Mathematics at the <strong>National and Kapodistrian University of Athens</strong>.
+                    </p>
+
+                <div class="row">
+                    
+                    <div class="row mt-4">
+
+                        <!-- Interests -->
+                        <div class="col-md-6">
+                          <h3>Interests</h3>
+                          <ul>
+                            <li>Federated learning</li>
+                            <li>Continual learning</li>
+                            <li>Meta-learning</li>
+                            <li>Reinforcement learning</li>
+                            <li>Probabilistic machine learning</li>
+                          </ul>
+                        </div>
+                        
+                        <div class="col-md-6">
+                          <h3>Research</h3>
+                          <p>Multi-task learning, decentralized learning systems, and probabilistic methods for machine learning.</p>
+                        </div>
+            
+                      </div>
+
+                    <div class="col-auto h-100">
+                        
+                        
+                    </div>
+                    <div class="col-auto px-0 h-100"><span>
+    
+    
+
+    
+    
+</span>
+</div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-4">
+                <div class="row justify-content-center">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    
+</section>
+
+<section id="about" class="py-0 py-sm-5">
+    <div class="container bg-transparent">
+        <h3 class="text-center bg-transparent">About Me</h3>
+        <div class="bg-transparent row justify-content-center px-3 py-5">
+            
+            <div class="col-sm-12 col-md-8 col-lg-4 mb-5 mb-sm-0 mb-md-5 mb-lg-0 d-none d-sm-none d-md-block">
+                <div class="image d-flex px-5">
+                    <img src="/images/2ndlieutenant.jpg" class="img-thumbnail mx-auto" alt="Sotirios Nikoloutsopoulos">
+                </div>
+            </div>
+            
+            <div class="col-sm-12 col-md-12 col-lg-8 content">
+
+                <p>
+                    Following the completion of my doctoral studies, I am currently fulfilling my mandatory military service 
+                    as a <strong>Second Lieutenant (Reserve Officer)</strong> in the Hellenic Army.
+                </p>
+                <p>
+                    I have been assigned to the <strong>Hellenic Research Technological Development and Innovation Center (KETAK)</strong>. 
+                    In this capacity, I continue to work as a Researcher, applying my expertise in Artificial Intelligence.
+                </p>
+
+                <div class="mt-4">
+                    <h5 class="mb-3 text-primary">Technical Skills</h5>
+                    <div class="row">
+                        
+                        <div class="col-6 col-md-3 mb-3">
+                            <strong>Languages</strong><br>
+                            <span class="text-muted">Python, C/C++, Java, C#, R, Matlab, PHP, JavaScript, SQL</span>
+                        </div>
+
+                        <div class="col-6 col-md-3 mb-3">
+                            <strong>ML Frameworks</strong><br>
+                            <span class="text-muted">PyTorch, TensorFlow, JAX, Keras</span>
+                        </div>
+
+                        <div class="col-6 col-md-3 mb-3">
+                            <strong>Dev Tools</strong><br>
+                            <span class="text-muted">Git, Docker, LaTeX</span>
+                        </div>
+
+                        <div class="col-6 col-md-3 mb-3">
+                            <strong>3D & Design</strong><br>
+                            <span class="text-muted">Fusion 360, 3D Printing, Clip Studio Paint</span>
+                        </div>
+
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="experience" class="py-5">
+    <div class="container">
+        <h3 class="text-center">Experience</h3>
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-md-8 col-lg-8 py-5">
+                <div class="experience-container px-3 pt-2">
+                    <ul class="nav nav-pills mb-2 bg-transparent primary-font" id="pills-tab" role="tablist">
+                        <li class="nav-item px-1 bg-transparent" role="presentation">
+                            <div class="nav-link bg-transparent active" data-bs-toggle="pill" data-bs-target="#pills-ketak" role="tab">KETAK</div>
+                        </li>
+                        <li class="nav-item px-1 bg-transparent" role="presentation">
+                            <div class="nav-link bg-transparent" data-bs-toggle="pill" data-bs-target="#pills-aueb" role="tab">AUEB</div>
+                        </li>
+                        <li class="nav-item px-1 bg-transparent" role="presentation">
+                            <div class="nav-link bg-transparent" data-bs-toggle="pill" data-bs-target="#pills-hbp" role="tab">Human Brain Project</div>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content pb-3 bg-transparent primary-font" id="pills-tabContent">
+                        <div class="tab-pane fade bg-transparent active show" id="pills-ketak" role="tabpanel">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div><span class="h4">Researcher (Military Service)</span><small> - KETAK</small></div>
+                                <div class="d-block"><small>Apr 2025 - Mar 2026</small></div>
+                            </div>
+                            <div class="pb-2 pb-3">Serving as a Second Lieutenant and Machine Learning Researcher at the Hellenic Research Technological Development and Innovation Center.</div>
+                        </div>
+                    
+                        <div class="tab-pane fade bg-transparent" id="pills-aueb" role="tabpanel">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div><span class="h4">Researcher</span><small> - AUEB</small></div>
+                                <div class="d-block"><small>May 2021 - Apr 2023</small></div>
+                            </div>
+                            <div class="pb-2 pb-3">Researcher in the project "Holistic and foundational resource allocation framework for optimized and impactful edge computing services (LeadingEdge)"[cite: 33].</div>
+                        </div>
+                    
+                        <div class="tab-pane fade bg-transparent" id="pills-hbp" role="tabpanel">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div><span class="h4">Software Engineer</span><small> - Human Brain Project</small></div>
+                                <div class="d-block"><small>Jan 2018 - Dec 2020 [cite: 34]</small></div>
+                            </div>
+                            <div class="pb-2 pb-3">
+                                <ul>
+                                    <li>Setup LORIS for hospitals joining the Medical Informatics Platform[cite: 34].</li>
+                                    <li>Worked on Query rewriting for Ontology Based Data Access[cite: 35].</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+</section>
+
+
+<section id="education" class="py-5">
+    <div class="container">
+        <h3 class="text-center">Education</h3>
+        <div class="row justify-content-center py-5">
+            
+            
+            <div class="col-12 p-0">
+                <div class="row row align-items-center justify-content-center m-1 mb-4">
+                    <div class="col-md-9">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="float-end">
+                                    <small>2017 - 2024</small>
+                                </div>
+                                <h5 class="card-title">PhD in Artificial Intelligence</h5>
+                                <a href="https://aueb.gr" target="_blank">
+                                    <h6>
+                                        Athens University of Economics and Business (AUEB)
+                                    </h6>
+                                </a>
+                                
+                                <div class="py-1 education-content">
+                                    <strong>Thesis:</strong> 
+                                    <a href="https://www.didaktorika.gr/eadd/handle/10442/58349" target="_blank" style="text-decoration: underline; color: inherit;">
+                                        "Federated, Continual and Meta-Learning Algorithms for Multi-task Settings"
+                                    </a>
+                                </div>
+                                
+                                <div class="mt-2">
+                                    <a href="https://www.didaktorika.gr/eadd/handle/10442/58349" target="_blank" class="btn btn-sm btn-outline-primary">
+                                        <i class="fas fa-file-pdf"></i> View Thesis
+                                    </a>
+                                </div>
+            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 p-0">
+                <div class="row row align-items-center justify-content-center m-1 mb-4">
+                    <div class="col-md-9">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="float-end"><small>2024 - Present</small></div>
+                                <h5 class="card-title">BSc in Mathematics</h5>
+                                <a href="https://www.math.uoa.gr/" target="_blank">
+                                    <h6>
+                                        National & Kapodistrian University of Athens
+                                    </h6>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 p-0">
+                <div class="row row align-items-center justify-content-center m-1 mb-4">
+                    <div class="col-md-9">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="float-end">
+                                    <small>2016 - 2017</small>
+                                </div>
+                                <h5 class="card-title">MSc in Data Science</h5>
+                        
+                                <a href="https://aueb.gr" target="_blank">
+                                    <h6>
+                                        Athens University of Economics and Business (AUEB)
+                                    </h6>
+                                </a>
+                                
+                                <div class="py-1 education-content">
+                                    <strong>Thesis:</strong> 
+                                    <a href="https://www.pyxida.aueb.gr/items/edeeb93d-39ae-4dde-895c-290d0a8c0172" target="_blank" style="text-decoration: underline; color: inherit;">
+                                        "Deep reinforcement learning for playing games"
+                                    </a>
+                                </div>
+            
+                                <div class="mt-2">
+                                    <a href="https://www.pyxida.aueb.gr/items/edeeb93d-39ae-4dde-895c-290d0a8c0172" target="_blank" class="btn btn-sm btn-outline-primary">
+                                        <i class="fas fa-file-pdf"></i> View Thesis
+                                    </a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 p-0">
+                <div class="row row align-items-center justify-content-center m-1 mb-4">
+                    <div class="col-md-9">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="float-end">
+                                    <small>2012 - 2016</small>
+                                </div>
+                                <h5 class="card-title">BSc in Computer Science</h5>
+                                
+                                <a href="https://www.unipi.gr/en/" target="_blank">
+                                    <h6>
+                                    University of Piraeus
+                                    </h6>
+                                </a>
+            
+                                <div class="py-1">
+                                    Grade:
+                                    <i>
+                                        <small>9.2 / 10.0</small>
+                                    </i> 
+                                </div>
+            
+                                <div class="py-1 education-content">
+                                    <ul>
+                                        <li><strong>Distinction:</strong> Graduated Top of the Class (Reading of the Oath)</li>
+                                        <li><strong>Thesis:</strong> "OCR for Trading Card Games"</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<section id="teaching" class="py-5">
+    <div class="container">
+        <h3 class="text-center">Teaching Experience</h3>
+        
+        <div class="text-center mb-5">
+            <h5 class="text-muted">Athens University of Economics and Business</h5>
+            <p class="text-muted" style="font-style: italic;">
+                Served as a Teaching Assistant for one course per semester throughout my doctoral studies.
+            </p>
+        </div>
+        
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="card bg-transparent border-0">
+                    <div class="card-body bg-transparent">
+                        
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <h5 class="mb-3 text-primary"><i class="fas fa-chalkboard-teacher me-2"></i> Machine Learning</h5>
+                                <ul class="secondary-font">
+                                    <li>Spring 2019, 2020, 2021</li>
+                                    <li>Fall 2022</li>
+                                </ul>
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+                                <h5 class="mb-3 text-primary"><i class="fas fa-dice me-2"></i> Probability & Mathematics</h5>
+                                <ul class="secondary-font">
+                                    <li><strong>Probability:</strong> Spring 2022, 2024</li>
+                                    <li><strong>Mathematics I:</strong> Fall 2023</li>
+                                    <li><strong>Computational Mathematics:</strong> Fall 2020</li>
+                                </ul>
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+                                <h5 class="mb-3 text-primary"><i class="fas fa-code me-2"></i> Computer Science</h5>
+                                <ul class="secondary-font">
+                                    <li><strong>Intro to Computer Programming:</strong> Fall 2019</li>
+                                    <li><strong>Operating Systems:</strong> Spring 2018</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="honors" class="py-5">
+    <div class="container">
+        <h3 class="text-center mb-5">Honors & Awards</h3>
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                
+                <div class="card bg-transparent border-0">
+                    <div class="card-body bg-transparent">
+                        <ul class="fa-ul" style="list-style: none; padding-left: 0; font-size: 1.1rem;">
+                            
+                            <li class="mb-4">
+                                <span class="fa-li" style="margin-right: 15px;">
+                                    <i class="fas fa-trophy fa-2x text-primary"></i>
+                                </span>
+                                <div>
+                                    <strong>Scholarship Recipient (2019)</strong>
+                                    <br>
+                                    <span class="text-secondary">1st International Summer School on Artificial Intelligence and Games</span>
+                                </div>
+                            </li>
+
+                            <li class="mb-4">
+                                <span class="fa-li" style="margin-right: 15px;">
+                                    <i class="fas fa-certificate fa-2x text-primary"></i>
+                                </span>
+                                <div>
+                                    <strong>Valedictorian (2016)</strong>
+                                    <br>
+                                    <span class="text-secondary">Reading of the Oath, University of Piraeus (GPA: 9.2/10)</span>
+                                </div>
+                            </li>
+
+                            <li class="mb-4">
+                                <span class="fa-li" style="margin-right: 15px;">
+                                    <i class="fas fa-medal fa-2x text-primary"></i>
+                                </span>
+                                <div>
+                                    <strong>Deputy Team Member (2009)</strong>
+                                    <br>
+                                    <span class="text-secondary">Junior Balkan Olympiad of Informatics</span>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="outreach" class="py-5">
+    <div class="container">
+        <h3 class="text-center mb-5">Outreach</h3>
+        
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="card bg-transparent border-0">
+                    <div class="card-body bg-transparent">
+                        
+                        <div class="d-flex align-items-start">
+                            <div class="me-4 text-primary">
+                                <i class="fas fa-users fa-3x"></i>
+                            </div>
+                            
+                            <div>
+                                <h4 class="mb-2">Volunteering & Mentorship</h4>
+                                <p class="mt-3 text-secondary">
+                                    I have participated in the following voluntary teaching and educational initiatives:
+                                </p>
+                                
+                                <ul class="fa-ul secondary-font" style="margin-left: 1.5rem;">
+                                    
+                                    <li class="mb-3">
+                                        <span class="fa-li"><i class="fas fa-laptop-code text-primary"></i></span>
+                                        <strong>Competitive Programming Seminars (UniPi):</strong>
+                                        <br>
+                                        Co-organized and taught a series of algorithmic problem-solving workshops for undergraduate students, in collaboration with 
+                                        <a href="https://www.unipi.gr/en/jtas-en/" target="_blank" style="text-decoration: underline; color: inherit;">Ioannis Tasoulas</a>.
+                                        <br>
+                                        <a href="https://github.com/sotirisnik/Competitive_programming_meetings" target="_blank" style="text-decoration: none; font-size: 0.9rem;">
+                                            <i class="fab fa-github"></i> View Materials
+                                        </a>
+                                    </li>
+
+                                    <li class="mb-3">
+                                        <span class="fa-li"><i class="fas fa-chalkboard-teacher text-primary"></i></span>
+                                        <strong>JBOI Trainer:</strong> Taught <em>Data Structures</em> to junior students preparing for the Junior Balkan Olympiad in Informatics (JBOI).
+                                    </li>
+
+                                    <li class="mb-3">
+                                        <span class="fa-li"><i class="fas fa-user-clock text-primary"></i></span>
+                                        <strong>National Competition Invigilator:</strong> Served as a voluntary proctor for the Panhellenic Competition in Informatics (PDP).
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="publications" class="py-5">
+    <div class="container">
+        <h3 class="text-center mb-5">Selected Publications</h3>
+        
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-10">
+
+                <div class="row mb-4">
+                    <div class="col-auto">
+                        <i class="far fa-file-alt fa-2x text-muted" aria-hidden="true"></i>
+                    </div>
+                    <div class="col">
+                        <div class="primary-font">
+                            <span><strong>Sotirios Nikoloutsopoulos</strong>, Iordanis Koutsopoulos, Michalis Titsias</span>
+                            (2025).
+                            <br>
+                            <a href="https://link.springer.com/journal/10489" class="h5" style="text-decoration: none;" target="_blank">
+                                Personalized Federated Learning with Exact Stochastic Gradient Descent
+                            </a>.
+                            <br>
+                            <em>Applied Intelligence (Springer), Volume 55, article number 1123</em>.
+                        </div>
+                        <div class="mt-2">
+                            <a class="btn btn-outline-primary btn-sm my-1 mr-1" href="https://arxiv.org/pdf/2202.09848.pdf" target="_blank">
+                                <i class="fas fa-file-pdf"></i> PDF
+                            </a>
+                            <button type="button" class="btn btn-outline-primary btn-sm my-1 mr-1" onclick="showCitation('cite-1')">Cite</button>
+                        </div>
+                        <div id="cite-1" style="display:none">@article{nikoloutsopoulos2025personalized,
+                            title={Personalized Federated Learning with Exact Stochastic Gradient Descent},
+                            author={Nikoloutsopoulos, Sotirios and Koutsopoulos, Iordanis and Titsias, Michalis},
+                            journal={Applied Intelligence},
+                            volume={55},
+                            number={1123},
+                            year={2025},
+                            publisher={Springer}
+                          }
+}</div>
+                    </div>
+                </div>
+
+                <div class="row mb-4">
+                    <div class="col-auto">
+                        <i class="far fa-file-alt fa-2x text-muted" aria-hidden="true"></i>
+                    </div>
+                    <div class="col">
+                        <div class="primary-font">
+                            <span><strong>Sotirios Nikoloutsopoulos</strong>, Iordanis Koutsopoulos, Michalis Titsias</span>
+                            (2024).
+                            <br>
+                            <a href="https://ieeexplore.ieee.org/document/10624806" class="h5" style="text-decoration: none;" target="_blank">
+                                Kullback-Leibler Reservoir Sampling for Fairness in Continual Learning
+                            </a>.
+                            <br>
+                            <em>IEEE International Conference on Machine Learning for Communication and Networking (ICMLCN), Stockholm</em>.
+                        </div>
+                        <div class="mt-2">
+                            <a class="btn btn-outline-primary btn-sm my-1 mr-1" href="https://ieeexplore.ieee.org/document/10624806" target="_blank">
+                                <i class="fas fa-file-pdf"></i> PDF
+                            </a>
+                            <button type="button" class="btn btn-outline-primary btn-sm my-1 mr-1" onclick="showCitation('cite-2')">Cite</button>
+                        </div>
+                        <div id="cite-2" style="display:none">@inproceedings{nikoloutsopoulos2024kullback,
+  title={Kullback-Leibler Reservoir Sampling for Fairness in Continual Learning},
+  author={Nikoloutsopoulos, Sotirios and Koutsopoulos, Iordanis and Titsias, Michalis},
+  booktitle={2024 IEEE International Conference on Machine Learning for Communication and Networking (ICMLCN)},
+  pages={1--6},
+  year={2024},
+  organization={IEEE}
+}</div>
+                    </div>
+                </div>
+
+                <div class="row mb-4">
+                    <div class="col-auto">
+                        <i class="far fa-file-alt fa-2x text-muted" aria-hidden="true"></i>
+                    </div>
+                    <div class="col">
+                        <div class="primary-font">
+                            <span>Apostolos G. Katsafados, <strong>Sotirios Nikoloutsopoulos</strong>, George N. Leledakis</span>
+                            (2023).
+                            <br>
+                            <a href="https://www.emerald.com/jes/article-abstract/50/8/1866/208092/Twitter-sentiment-and-stock-market-a-COVID-19?redirectedFrom=fulltext" class="h5" style="text-decoration: none;" target="_blank">
+                                Twitter sentiment and stock market: a COVID-19 analysis
+                            </a>.
+                            <br>
+                            <em>Journal of Economic Studies (Emerald)</em>.
+                        </div>
+                        <div class="mt-2">
+                            <a class="btn btn-outline-primary btn-sm my-1 mr-1" href="https://www.emerald.com/jes/article-abstract/50/8/1866/208092/Twitter-sentiment-and-stock-market-a-COVID-19?redirectedFrom=fulltext" target="_blank">
+                                <i class="fas fa-file-pdf"></i> PDF
+                            </a>
+                            <button type="button" class="btn btn-outline-primary btn-sm my-1 mr-1" onclick="showCitation('cite-3')">Cite</button>
+                        </div>
+                        <div id="cite-3" style="display:none">@article{katsafados2023twitter,
+  title={Twitter sentiment and stock market: a COVID-19 analysis},
+  author={Katsafados, Apostolos G and Nikoloutsopoulos, Sotirios and Leledakis, George N},
+  journal={Journal of Economic Studies},
+  volume={50},
+  number={8},
+  pages={1866--1886},
+  year={2023},
+  publisher={Emerald Publishing Limited}
+}</div>
+                    </div>
+                </div>
+
+                <div class="row mb-4">
+                    <div class="col-auto">
+                        <i class="far fa-file-alt fa-2x text-muted" aria-hidden="true"></i>
+                    </div>
+                    <div class="col">
+                        <div class="primary-font">
+                            <span><strong>Sotirios Nikoloutsopoulos</strong>, Iordanis Koutsopoulos, Michalis Titsias</span>
+                            (2023).
+                            <br>
+                            <a href="https://alaworkshop2023.github.io/papers/ALA2023_paper_46.pdf" class="h5" style="text-decoration: none;" target="_blank">
+                                Personalized Federated Learning with Exact Distributed Stochastic Gradient Descent Updates
+                            </a>.
+                            <br>
+                            <em>Adaptive and Learning Agents Workshop at AAMAS, London, UK</em>.
+                        </div>
+                        <div class="mt-2">
+                            <a class="btn btn-outline-primary btn-sm my-1 mr-1" href="https://alaworkshop2023.github.io/papers/ALA2023_paper_46.pdf" target="_blank">
+                                <i class="fas fa-file-pdf"></i> PDF
+                            </a>
+                            <button type="button" class="btn btn-outline-primary btn-sm my-1 mr-1" onclick="showCitation('cite-4')">Cite</button>
+                        </div>
+                        <div id="cite-4" style="display:none">@inproceedings{nikoloutsopoulos2023personalized,
+  title={Personalized Federated Learning with Exact Distributed Stochastic Gradient Descent Updates},
+  author={Nikoloutsopoulos, Sotirios and Koutsopoulos, Iordanis and Titsias, Michalis},
+  booktitle={Adaptive and Learning Agents Workshop (ALA) at AAMAS},
+  year={2023}
+}</div>
+                    </div>
+                </div>
+
+                <div class="row mb-4">
+                    <div class="col-auto">
+                        <i class="far fa-file-alt fa-2x text-muted" aria-hidden="true"></i>
+                    </div>
+                    <div class="col">
+                        <div class="primary-font">
+                            <span><strong>Sotirios Nikoloutsopoulos</strong>, Iordanis Koutsopoulos, Michalis Titsias</span>
+                            (2022).
+                            <br>
+                            <a href="https://mm.aueb.gr/leadingedge/pubs/2022_NeurIPS-HILL.pdf" class="h5" style="text-decoration: none;" target="_blank">
+                                Online Continual Learning from Imbalanced Data with Kullback-Leibler-loss based replay buffer updates
+                            </a>.
+                            <br>
+                            <em>NeurIPS 2022 Workshop on Human in the Loop Learning (HiLL), New Orleans</em>.
+                        </div>
+                        <div class="mt-2">
+                            <a class="btn btn-outline-primary btn-sm my-1 mr-1" href="https://mm.aueb.gr/leadingedge/pubs/2022_NeurIPS-HILL.pdf" target="_blank">
+                                <i class="fas fa-file-pdf"></i> PDF
+                            </a>
+                            <button type="button" class="btn btn-outline-primary btn-sm my-1 mr-1" onclick="showCitation('cite-5')">Cite</button>
+                        </div>
+                        <div id="cite-5" style="display:none">@inproceedings{nikoloutsopoulos2022online,
+  title={Online Continual Learning from Imbalanced Data with Kullback-Leibler-loss based replay buffer updates},
+  author={Nikoloutsopoulos, Sotirios and Koutsopoulos, Iordanis and Titsias, Michalis},
+  booktitle={NeurIPS Workshop on Human in the Loop Learning},
+  year={2022}
+}</div>
+                    </div>
+                </div>
+
+                <div class="row mb-4">
+                    <div class="col-auto">
+                        <i class="far fa-file-alt fa-2x text-muted" aria-hidden="true"></i>
+                    </div>
+                    <div class="col">
+                        <div class="primary-font">
+                            <span>Michalis K. Titsias, Francisco J. R. Ruiz, <strong>Sotirios Nikoloutsopoulos</strong>, Alexandre Galashov</span>
+                            (2021).
+                            <br>
+                            <a href="https://proceedings.mlr.press/v161/titsias21a.html" class="h5" style="text-decoration: none;" target="_blank">
+                                Information Theoretic Meta Learning with Gaussian Processes
+                            </a>.
+                            <br>
+                            <em>Proceedings of the Thirty-Seventh Conference on Uncertainty in Artificial Intelligence (UAI 2021)</em>.
+                        </div>
+                        <div class="mt-2">
+                            <a class="btn btn-outline-primary btn-sm my-1 mr-1" href="https://proceedings.mlr.press/v161/titsias21a/titsias21a.pdf" target="_blank">
+                                <i class="fas fa-file-pdf"></i> PDF
+                            </a>
+                            <button type="button" class="btn btn-outline-primary btn-sm my-1 mr-1" onclick="showCitation('cite-6')">Cite</button>
+                        </div>
+                        <div id="cite-6" style="display:none">@inproceedings{titsias2021information,
+  title={Information Theoretic Meta Learning with Gaussian Processes},
+  author={Titsias, Michalis K and Ruiz, Francisco JR and Nikoloutsopoulos, Sotirios and Galashov, Alexandre},
+  booktitle={Proceedings of the Thirty-Seventh Conference on Uncertainty in Artificial Intelligence},
+  pages={954--964},
+  year={2021},
+  organization={PMLR}
+}</div>
+                    </div>
+                </div>
+
+                <div class="row mb-4">
+                    <div class="col-auto">
+                        <i class="far fa-file-alt fa-2x text-muted" aria-hidden="true"></i>
+                    </div>
+                    <div class="col">
+                        <div class="primary-font">
+                            <span>Michalis Titsias, <strong>Sotirios Nikoloutsopoulos</strong></span>
+                            (2018).
+                            <br>
+                            <a href="https://arxiv.org/abs/1810.00468" class="h5" style="text-decoration: none;" target="_blank">
+                                Bayesian Transfer Reinforcement Learning with Prior Knowledge Rules
+                            </a>.
+                            <br>
+                            <em>arXiv preprint arXiv:1810.00468</em>.
+                        </div>
+                        <div class="mt-2">
+                            <a class="btn btn-outline-primary btn-sm my-1 mr-1" href="https://arxiv.org/pdf/1810.00468.pdf" target="_blank">
+                                <i class="fas fa-file-pdf"></i> PDF
+                            </a>
+                            <button type="button" class="btn btn-outline-primary btn-sm my-1 mr-1" onclick="showCitation('cite-7')">Cite</button>
+                        </div>
+                        <div id="cite-7" style="display:none">@article{titsias2018bayesian,
+  title={Bayesian Transfer Reinforcement Learning with Prior Knowledge Rules},
+  author={Titsias, Michalis and Nikoloutsopoulos, Sotirios},
+  journal={arXiv preprint arXiv:1810.00468},
+  year={2018}
+}</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="py-5">
+    <div class="container">
+        <div class="row contact-widget justify-content-center">
+            
+            <div class="col-12 col-lg-4 section-heading text-center text-lg-start">
+                <h1>Contact</h1>
+            </div>
+
+            <div class="col-12 col-lg-8">
+                <ul class="fa-ul" style="list-style: none; padding-left: 0;">
+
+                    <li class="mb-4 d-flex align-items-start">
+                        <span class="fa-li" style="margin-right: 15px;">
+                            <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+                        </span>
+                        <span id="person-email">
+                            <a href="mailto:snikolou@aueb.gr" style="text-decoration: none; font-size: 1.1rem;">snikolou@aueb.gr</a>
+                            <br>
+                            <a href="mailto:sotirisnik@gmail.com" style="text-decoration: none; font-size: 1.1rem; color: #6c757d;">sotirisnik@gmail.com</a>
+                        </span>
+                    </li>
+
+                    <li class="mb-4 d-flex align-items-start">
+                        <span class="fa-li" style="margin-right: 15px;">
+                            <i class="fas fa-map-marker-alt fa-2x" aria-hidden="true"></i>
+                        </span>
+                        <span id="person-address" style="font-size: 1.1rem;">
+                            Athens University of Economics and Business<br>
+                            Troias 2,<br>
+                            Athens 11362, Greece
+                        </span>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="check-circle-fill" viewBox="0 0 16 16">
+    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+  </symbol>
+  <symbol id="info-fill" viewBox="0 0 16 16">
+    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+  </symbol>
+  <symbol id="exclamation-triangle-fill" viewBox="0 0 16 16">
+    <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+  </symbol>
+</svg>
+
+  </div><footer>
+    
+ 
+ 
+
+    
+</div><div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center">
+            
+                <div class="pb-2">
+                    <a href="https://sotirisnik.github.io/" title="Home">
+                        <img alt="Footer logo" src="/fav.png"
+                            height="40px" width="40px">
+                    </a>
+                </div>
+            
+            &copy; 2025  All rights reserved
+            <div class="text-secondary">
+                Made with
+                <span class="text-danger">
+                    &#10084;
+                </span>
+                and
+                <a href="https://github.com/gurusabarish/hugo-profile" target="_blank"
+                    title="Designed and developed by gurusabarish">
+                    Hugo Profile
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+</footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.documentElement.classList.add('dark');
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+        document.documentElement.classList.remove('dark');
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.classList.add('dark');
+        document.body.classList.add('dark');
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            document.documentElement.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            document.documentElement.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+</script>
+
+
+    <script src="/js/search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+  <section id="search-content" class="py-2">
+    <div class="container" id="search-results"></div>
+  </section>
+
+  <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalLabel">Cite</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <pre style="background-color: #2e3440; color: #d8dee9; padding: 15px; border-radius: 5px; overflow-x: auto;"><code id="citationCode" class="tex hljs" style="display:block; white-space: pre-wrap; font-family: monospace;"></code></pre>
+        </div>
+        <div class="modal-footer">
+          <a class="btn btn-outline-primary my-1 btn-sm" href="#" onclick="copyCitation(); return false;">
+            <i class="fas fa-copy"></i> Copy
+          </a>
+          <a class="btn btn-outline-primary my-1 btn-sm" href="#" id="downloadCiteBtn" target="_blank">
+            <i class="fas fa-download"></i> Download
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+      function showCitation(elementId) {
+          // 1. Get the BibTeX text
+          var citationText = document.getElementById(elementId).innerText;
+          
+          // 2. Put it inside the Modal's code block
+          document.getElementById('citationCode').innerText = citationText;
+          
+          // 3. Setup the Download Button
+          // We create a "Blob" (a virtual file) containing the text
+          var blob = new Blob([citationText], { type: 'text/plain' });
+          var url = window.URL.createObjectURL(blob);
+          var downloadBtn = document.getElementById('downloadCiteBtn');
+          downloadBtn.href = url;
+          downloadBtn.download = 'cite.bib'; // The filename for the download
+          
+          // 4. Show the Modal
+          var myModal = new bootstrap.Modal(document.getElementById('modal'));
+          myModal.show();
+      }
+  
+      function copyCitation() {
+          var citationText = document.getElementById('citationCode').innerText;
+          navigator.clipboard.writeText(citationText).then(function() {
+              // Optional: Alert the user or change button text
+              // alert("Citation copied!"); 
+          }, function(err) {
+              console.error('Could not copy text: ', err);
+          });
+      }
+  </script>
+  
+</body>
+
+</html>
